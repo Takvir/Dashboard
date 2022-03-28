@@ -1,0 +1,49 @@
+<h1>All Data</h1>
+
+<button (click)="getDataFromAPI()">Get Data</button>
+
+
+
+
+<!-- <ul *ngFor="let d of data">
+    <li>{{d.id}}</li>
+    <li>{{d.name}}</li>
+
+</ul> -->
+
+<br><br>
+
+<div class="container">
+
+<table *ngIf = "!Loading">
+   
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Website</th>
+        <th scope="col">Company</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data">
+        <th scope="row">{{d.id}}</th>
+        <td>{{d.name}}</td>
+        <td>{{d.username}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.address.city}}</td>
+        <td>{{d.phone}}</td>
+        <td>{{d.website}}</td>
+        <td>{{d.company.name}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
